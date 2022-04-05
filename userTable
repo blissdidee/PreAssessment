@@ -1,0 +1,24 @@
+1)The total number of Users (i.e. COUNT of all users) in the system.  
+Syn - SELECT COUNT (Name) from Users
+2)The total number of Users in the Accounting Department.
+Syn - SELECT COUNT (Department) from Users WHERE Department = “Accounting”
+3)The total number of Users that have not activated their account.
+Syn - SELECT COUNT (Status) from Users WHERE NOT Status = “Activated”
+4)List the first 5 Users that registered for an account in the system.
+Syn - SELECT * from users WHERE ID <=5
+5)All Users whose age is greater than 18 but less than 26.
+Syn - SELECT * from users WHERE Age >18 AND Age < 26;
+6)All Users that registered for an account last week Thursday.
+Syn - SELECT * from users WHERE Created_dt = 06-01-2020
+7)All Users that registered for an account between last week Saturday and this week Monday.
+Syn - 
+8)Query to Activate all pending Users in the system.
+Syn - Update Users 
+Set Status = “Activated” WHERE Status = “Pending”
+9)Query to Update the User whose name is Tim to Timothy.
+Syn - Update Users 
+Set Name = “Timothy” WHERE Name = “Tim”
+
+10)Total Number of Users in each Department.
+
+Syn - SELECT Department, COUNT(*) From Users Group By Department;
